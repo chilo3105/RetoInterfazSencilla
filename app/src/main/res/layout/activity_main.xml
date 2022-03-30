@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtBluetooth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bluetooth"
+        android:layout_marginLeft="15dp"
+        android:gravity="left"
+        android:textSize="30sp"
+        android:textColor="#FAFAFA"
+        app:layout_constraintBottom_toTopOf="@id/txtNombre"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/switch1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/txtBluetooth"
+        app:layout_constraintBottom_toTopOf="@id/txtNombre"
+        />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre del dispositivo"
+        android:layout_marginLeft="15dp"
+        android:textSize="25sp"
+        android:gravity="left"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/txtPoco"
+        app:layout_constraintTop_toBottomOf="@id/txtBluetooth"
+        app:layout_constraintBottom_toTopOf="@id/linea"/>
+
+    <TextView
+        android:id="@+id/txtPoco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poco X3 >"
+        android:textSize="25sp"
+        android:textColor="#808080"
+        android:gravity="right"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toRightOf="@id/txtNombre"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBluetooth"
+        app:layout_constraintBottom_toTopOf="@id/linea"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/linea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:layout_constraintTop_toBottomOf="@id/txtPoco"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtConfig"
+        />
+
+    <TextView
+        android:id="@+id/txtConfig"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CONFIG. DE BLUETOOTH"
+        android:textSize="15sp"
+        android:layout_marginLeft="15dp"
+        android:textColor="#808080"
+        android:gravity="left"
+        app:layout_constraintBottom_toTopOf="@id/txtAjustes"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linea" />
+
+    <TextView
+        android:id="@+id/txtAjustes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ajustes adicionales"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="left"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/txtMayor"
+        app:layout_constraintTop_toBottomOf="@id/txtConfig" />
+
+    <TextView
+        android:id="@+id/txtMayor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=">"
+        android:textSize="30sp"
+        android:gravity="right"
+        android:layout_marginRight="15dp"
+        android:textColor="#808080"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/txtAjustes"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtConfig" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
